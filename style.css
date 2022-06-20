@@ -1,0 +1,83 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  
+}
+
+#app{
+    height: 100vh;
+    color: white;
+    
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.left{
+    padding-bottom: 1em;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.temperature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.weather{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    font-size: small;
+    background-color:rgba(175, 174, 174, 0.3) ;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    border-radius:10px ;
+
+}
+
+.feels-like{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.wind-img,
+.uv-img,
+.humidity-img,
+.precipitation-img,
+.rainfall-img,
+.pressure-img,.icon {
+  width: 60px;
+  height: 60px;
+}
