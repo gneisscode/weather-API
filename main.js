@@ -50,9 +50,9 @@ window.addEventListener("load", () => {
                             </section>
 
                             <section class="temperature">
-                                <h2 class="temperature-degree">${temp_c}C/${temp_f}F</h2>
+                                <h2 class="temperature-degree">${temp_c}&deg;C/${temp_f}&deg;F</h2>
                                 <div class="temperature-description">${text}</div>
-                                <h3 class= "feels-like"> Feels like ${feelslike_c}C/${feelslike_f}F</h3>
+                                <h3 class= "feels-like"> Feels like ${feelslike_c}&deg;C/${feelslike_f}&deg;F</h3>
                             </section>
                             </div>
                         
@@ -62,25 +62,25 @@ window.addEventListener("load", () => {
                             <section class= "weather">
 
                                 <section class="wind">
-                                   <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/wind.svg" class= "wind-img">Wind: ${wind_kph}km/h ${wind_dir}</h2>
+                                   <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/wind.svg" class= "wind-img">Wind: <span class="labels">${wind_kph}km/h ${wind_dir}</span></h2>
                                 </section>
 
                                 <section class="humidity">
-                                    <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/humidity.svg" class= "humidity-img">Humidity: ${humidity} %</h2>
+                                    <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/humidity.svg" class= "humidity-img">Humidity: <span class="labels">${humidity} %</span></h2>
                                 </section>
 
                                 <section class="rainfall">
-                                    <h2><h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/rain.svg" class= "rainfall-img">Rainfall: ${precip_mm} mm</h2>
+                                    <h2><h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/rain.svg" class= "rainfall-img">Rainfall: <span class="labels">${precip_mm} mm</span></h2>
                                 </section>
 
                             
                                 <section class="uv">
-                                    <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/uv-index.svg" class= "uv-img">UV index: ${uv}</h2>
+                                    <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/uv-index.svg" class= "uv-img">UV index: <span class="labels">${uv}</span></h2>
                                 </section>
 
 
                                 <section class="pressure">
-                                    <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/pressure-high.svg" class= "pressure-img">Pressure: ${pressure_mb} mb</h2>
+                                    <h2><img src= "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/pressure-high.svg" class= "pressure-img">Pressure: <span class="labels">${pressure_mb} mb</span></h2>
                                 </section>
 
                             

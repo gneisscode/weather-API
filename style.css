@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,68 +8,69 @@
 body {
   background-color: #ff4e00;
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
-  
+  font-family: "Oxygen", sans-serif;
 }
 
-#app{
-    height: 100vh;
-    color: white;
-    
+#app {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-.top{
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-    align-items: center;
-    justify-content: center;
-
+.top {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
 }
 
-.left{
-    padding-bottom: 1em;
+.left {
+  padding-bottom: 1em;
 }
 
-.location{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.temperature{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+.temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.weather{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    font-size: small;
-    background-color:rgba(175, 174, 174, 0.3) ;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 0.5em;
-    border-radius:10px ;
-
+.temperature-description {
+  font-weight: bold;
 }
 
-.feels-like{
-    font-size: 14px;
-    font-weight: bold;
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: small;
+  background-color: rgba(175, 174, 174, 0.3);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  border-radius: 10px;
 }
 
-.bottom{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+.feels-like {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .wind-img,
@@ -77,7 +78,157 @@ body {
 .humidity-img,
 .precipitation-img,
 .rainfall-img,
-.pressure-img,.icon {
+.pressure-img,
+.icon {
   width: 60px;
   height: 60px;
+}
+
+.labels {
+  font-weight: 300;
+}
+
+/* Tablets at horizontal landscape width */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  #app {
+    background-color: rgba(155, 145, 135, 0.3);
+    margin: 4em;
+    border-radius: 2em;
+    padding: 2em;
+    height: 80vh;
+  }
+  .top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+  .labels {
+    font-weight: 300;
+  }
+  .temperature-description {
+    font-weight: bold;
+  }
+}
+/* Small laptops at horizontal landscape width */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  #app {
+    background-color: rgba(155, 145, 135, 0.3);
+    margin: 4em;
+    border-radius: 2em;
+    padding: 0.5em;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+  .feels-like {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .temperature-description {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .temperature {
+    font-size: 20px;
+  }
+
+  .location {
+    font-size: 20px;
+  }
+
+  .bottom {
+    font-size: 20px;
+  }
+
+  .weather {
+    font-size: 18px;
+  }
+
+  .labels {
+    font-weight: 300;
+  }
+}
+
+/* Large desktop monitors */
+@media only screen and (min-width: 1201px) {
+  #app {
+    background-color: rgba(155, 145, 135, 0.3);
+    margin: 4em;
+    border-radius: 2em;
+    padding: 0.5em;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+  .feels-like {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .temperature-description {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .temperature {
+    font-size: 24px;
+  }
+
+  .location {
+    font-size: 24px;
+  }
+
+  .bottom {
+    font-size: 20px;
+  }
+
+  .weather {
+    font-size: 14px;
+  }
+
+  .labels {
+    font-weight: 300;
+  }
 }
