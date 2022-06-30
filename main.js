@@ -36,9 +36,27 @@ window.addEventListener("load", () => {
           feelslike_f,
         } = data.current;
 
-        if ((text = "Sunny")) {
-          icon =
-            "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/clear-day.svg";
+        // if ((text = "Sunny")) {
+        //   icon =
+        //     "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/clear-day.svg";
+        // }
+    
+        const icons = {
+          "Sunny":"https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/clear-day.svg",
+          "Partly cloudy":"https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/partly-cloudy-day.svg",
+          "Cloudy": "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/cloudy.svg",
+          "Overcast":"https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/overcast.svg",
+          "Light drizzle": "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/drizzle.svg",
+          "Heavy rain": "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/rain.svg",
+          "Moderate or heavy rain with thunder": "https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/thunderstorms-extreme-rain.svg",
+        };
+
+        if (icons.hasOwnProperty(text)){
+            icon= icons[text]
+        }
+
+        else{
+            icon=data.current.condition.icon
         }
 
         app.innerHTML = `
@@ -46,7 +64,7 @@ window.addEventListener("load", () => {
                         <div class= "left">
                             <section class="location">
                                 <h1>${name}, ${region}</h1>
-                                <img src="${icon}" class="icon" />
+                                <img src=${icon} class="icon" />
                             </section>
 
                             <section class="temperature">
